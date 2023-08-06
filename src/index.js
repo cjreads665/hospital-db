@@ -11,7 +11,7 @@ app.use(cors({origin: '*'}));
 
 app.use(express.json()) //sends the respons in json format
 
-app.get("/",(req,res)=> res.send({message: 'hello'}));
+app.get("/",(req,res)=> res.send(new Response(200,'OK','patient api v1', {patients : {name: "Bruce Awyne"}})));
 
 
 app.listen(PORT, ()=>console.log(`server is running on ${ip.address()}:${PORT}`));

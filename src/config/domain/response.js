@@ -1,3 +1,4 @@
+//this clasas will create response objects to be sent to the frontend
 class Response {
     constructor(statusCode,httpStatus,message,data){
         //we are dynamically adding timeStamp as a property to new objects

@@ -10,6 +10,15 @@ dotenv.config();
  * perform the db query
  * release the connection back to the pool
  */
+/**
+ * for gpt
+ * A connection pool is a set of pre-established database connections that are kept ready and available for reuse. 
+ * Instead of creating a new database connection every time the application needs to interact with the database, the connection pool allows 
+ * the application to grab an existing connection from the pool. After the interaction is complete, the connection is released back into the pool for future use.
+ * The primary purpose of using connection pools is to efficiently manage and reuse database connections. Instead of creating a new database connection for every individual database operation, a
+ * connection pool maintains a pool of established connections that can be reused multiple times. This reuse significantly reduces the overhead of establishing new connections for each request 
+ * and improves the application's performance and scalability.
+ */
 
 /**
  * we are creating multiple connections(pool) because
