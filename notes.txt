@@ -1,0 +1,2 @@
+init.sql will be the initial script that will run every time sql table is run/created.
+ 
