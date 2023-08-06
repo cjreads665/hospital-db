@@ -1,2 +1,16 @@
 init.sql will be the initial script that will run every time sql table is run/created.
- 
+We import a library called pino that helps us create a logger for our Node.js application.
+
+We create a new logger using pino and store it in a constant variable named log. This logger will help us keep track of what happens in our application.
+
+Inside the logger configuration, we make the following choices:
+
+base: {pid: false}: We decide not to include the "process ID" (PID) in the logs. The process ID is a unique number given to each running program, but we don't need it in our logs, so we turn it off.
+
+transport: {...}: This option allows us to specify where the logs should be sent or how they should be formatted. In this case, we use the "pino-pretty" transport target, which makes the logs pretty and colorful when they show up on the screen. The options property inside transport allows us to customize how the "pino-pretty" output looks. Here, we set colorized: true to make the logs colorful.
+
+timestamp: () => ","time": "${new Date.toLocalString()}": This part is a custom function that sets the format of the timestamp in the logs. A timestamp shows the date and time when each log entry is generated. In this case, we use a JavaScript Date object to get the current date and time, and we format it to our liking.
+
+Finally, we export the log variable so that we can use the same logger throughout our application. Any file in our app can now import log and use it to write logs.
+
+In summary, this code sets up a logger using pino for our Node.js application. The logger is configured to make the logs pretty, colorful, and easy to read with the "pino-pretty" transport target. By exporting the logger, we can use it in different parts of our app to keep track of what's happening and better understand its behavior.

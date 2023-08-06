@@ -3,6 +3,8 @@ import ip from 'ip';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import Response from "./config/domain/response.js";
+import logger from './util/logger.js'
+
 dotenv.config();
 const PORT = process.env.PORT || 3000;
 
@@ -14,7 +16,7 @@ app.use(express.json()) //sends the respons in json format
 app.get("/",(req,res)=> res.send(new Response(200,'OK','patient api v1', {patients : {name: "Bruce Awyne"}})));
 
 
-app.listen(PORT, ()=>console.log(`server is running on ${ip.address()}:${PORT}`));
+app.listen(PORT, ()=>logger.info(`server is running on ${ip.address()}:${PORT}`));
 
 
 
