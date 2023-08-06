@@ -14,3 +14,7 @@ timestamp: () => ","time": "${new Date.toLocalString()}": This part is a custom 
 Finally, we export the log variable so that we can use the same logger throughout our application. Any file in our app can now import log and use it to write logs.
 
 In summary, this code sets up a logger using pino for our Node.js application. The logger is configured to make the logs pretty, colorful, and easy to read with the "pino-pretty" transport target. By exporting the logger, we can use it in different parts of our app to keep track of what's happening and better understand its behavior.
+
+
+
+whatever query we use inside query folder will contain all the queries we are going to use to manipulate the db 
